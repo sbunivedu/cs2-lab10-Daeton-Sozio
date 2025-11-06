@@ -1,0 +1,63 @@
+The algorithm uses the in order successor or the left most node after the removed
+node to replace the node. 
+Another reasonable choice for the replacement would be the in order predecessor or the right most node after the removed node.
+
+[s865131@cisone cs2-lab10-Daeton-Sozio]$ java LinkedBinarySearchTreeTester.java
+                 /----- 9
+         /----- 8
+ /----- 7
+ |       |       /----- 6
+ |       \----- 5
+4
+ \----- 3
+         |       /----- 2
+         \----- 1
+# of nodes:9
+
+Inorder traversal:
+123456789
+after remove 3:
+                 /----- 9
+         /----- 8
+ /----- 7
+ |       |       /----- 6
+ |       \----- 5
+4
+ |       /----- 2
+ \----- 1
+# of nodes:8
+
+after remove 5:
+                 /----- 9
+         /----- 8
+ /----- 7
+ |       \----- 6
+4
+ \----- 3
+         |       /----- 2
+         \----- 1
+# of nodes:8
+
+after remove 7:
+         /----- 9
+ /----- 8
+ |       |       /----- 6
+ |       \----- 5
+4
+ \----- 3
+         |       /----- 2
+         \----- 1
+# of nodes:8
+
+test: find(5)
+expect: 5
+got:    5
+test: find(3)
+expect: 3
+got:    3
+test: find(4)
+expect: 4
+got:    4
+test: find(9)
+expect: null
+got:    9
